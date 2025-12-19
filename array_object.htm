@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mobile devices</title>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 style="margin-left: 3%;">
+            Mobile devices
+        </h1>
+        <a href="#" onclick="displayHighToLow()">High</a>
+        <a href="#" onclick="displayLowToHigh()">Low</a>
+        <a href="#" onclick="popData()">Pop</a>
+
+
+        <div id="result"></div>
+    </div>
+
+    
+    <script>
+        const data = [
+            {
+                Brand: "Xiaomi",
+                Model: "17 Pro",
+                Image: "Xiaomi17pro.png",
+                price: "62300",
+                Display: "6.30-inch",
+                Processor: "Snapdragon 8 Elite Gen 5",
+                Front_Camera: "50MP",
+                Rear_Camera: "50MP + 50MP + 50MP",
+                RAM: "12GB",
+                Storage: "256GB",
+                Battery_Capacity: "6300mAh",
+                OS: "Android 16",
+                Color: "Purple",
+                button: "Buy now",
+            },
+            {
+                Brand: "Samsung Galaxy",
+                Model: "A17",
+                price: "30000",
+                Image: "SamsungGalaxyA17.png",
+                Display: "6.70-inch",
+                Processor: "MediaTek Helio G99",
+                Front_Camera: "13MP",
+                Rear_Camera: "50MP + 5MP + 2MP",
+                RAM: "4GB",
+                Storage: "128GB",
+                Battery_Capacity: "5000mAh",
+                OS: "Android 15",
+                Color: "Black",
+                button: "Buy now",
+            },
+            {
+                Brand: "Oneplus",
+                Model: 13,
+                price: "68999",
+                Image: "Oneplus13.png",
+                Display: "6.82-inch",
+                Processor: "Snapdragon 8 Elite",
+                Front_Camera: "32MP",
+                Rear_Camera: "50MP + 50MP + 50MP",
+                RAM: "12GB, 16GB, 24GB",
+                Storage: "256GB, 512GB, 1TB",
+                Battery_Capacity: "6000mAh",
+                OS: "Android 15",
+                Color: "Midnight Ocean",
+                button: "Buy now",
+
+            },
+            {
+                Brand: "Motorola",
+                Model: "Moto G96 5G",
+                price: "15999",
+                Image: "Motorola.png",
+                Display: "6.67-inch",
+                Processor: "octa-core",
+                Front_Camera: "32MP",
+                Rear_Camera: "50-Ultrapixel + 8MP",
+                RAM: "8GB",
+                Storage: "128GB, 256GB",
+                Battery_Capacity: "5500mAh",
+                OS: "Android 15",
+                Color: "Pantone Ashleigh Blue",
+                button: "Buy now",
+            },
+            {
+                Brand: "Vivo",
+                Model: "T4x 5G",
+                price: "15998",
+                Image: "vivo.png",
+                Display: "6.72-inch",
+                Processor: "MediaTek Dimensity 7300",
+                Front_Camera: "6GB, 8GB",
+                Rear_Camera: "50MP + 2MP",
+                RAM: "8MP",
+                Storage: "128GB, 256GB",
+                Battery_Capacity: "6500mAh",
+                OS: "Android 15",
+                Color: "Pronto Purple",
+                button: "Buy now",
+            },
+            {
+                Brand: "Infinix",
+                Model: "Hot 60 5G+",
+                price: "10499",
+                Image: "infinix.png",
+                Display: "6.70-inch",
+                Processor: "Snapdragon 8 Elite",
+                Front_Camera: "8MP",
+                Rear_Camera: "50MP",
+                RAM: "6GB",
+                Storage: "128GB",
+                Battery_Capacity: "5200mAh",
+                OS: "Android 15",
+                Color: "Tundra Green",
+                button: "Buy now",
+            },
+            {
+                Brand: "Oppo",
+                Model: "Reno 14 5G",
+                price: "37998",
+                Image: "oppo.png",
+                Display: "6.59-inch",
+                Processor: "MediaTek Dimensity 8350",
+                Front_Camera: "50-megapixel",
+                Rear_Camera: "50-megapixel + 8-megapixel + 50-megapixel",
+                RAM: "8GB,12GB",
+                Storage: "256GB, 512GB",
+                Battery_Capacity: "6000mAh",
+                OS: "Android 15",
+                Color: "Pinellia Green",
+                button: "Buy now",
+            },
+
+            {
+                Brand: "Samsung ",
+                Model: "Galaxy S25 Ultra",
+                price: "23500",
+                Image: "samsungs25.png",
+                Display: "6.90-inch",
+                Processor: "Snapdragon 8 Elite",
+                Front_Camera: "12MP",
+                Rear_Camera: "200MP + 50MP + 50MP + 10MP",
+                RAM: "12GB, 16GB",
+                Storage: "128GB, 256GB",
+                Battery_Capacity: "5000mAh",
+                OS: "Android 15",
+                Color: "Pronto Purple",
+                button: "Buy now",
+            },
+        ]
+        function displayMobileList(data) {
+
+            let device = "";
+            for (i = 0; i < data.length; i++) {
+                device += `<span class="mobile-item">`
+                device += `<span class="images"><img src = "images/${data[i].Image}"width="200px" height="300"></span><br><br>`
+
+                device += `<span class="features"><b>Brand  :  </b><span style="color:blue;"> <b>${data[i].Brand}</b></span> </span><br>`
+                device += `<span class="features"><b>Model  :  </b><span style="color:blue;"> <b>${data[i].Model}</b></span></span><br>`
+                device += `<span class="features"><b>Color  :  </b>${data[i].Color}</span><br>`
+                device += `<span class="features"><b>Price  :  </b><span style="color:red;"> <b>${data[i].price}</b></span></span><br>`
+                device += `<span class="features"><b>Display  :  </b>${data[i].Display}</span><br>`
+                device += `<span class="features"><b>Battery capacity  :  </b>${data[i].Battery_Capacity}</span><br>`
+                device += `<span class="features"><b>Storage  :  </b>${data[i].Storage}</span><br>`
+                device += `<span class="features"><b>RAM  :  </b>${data[i].RAM}</span><br>`
+                device += `<span class="features"><b>Front camera  :  </b>${data[i].Front_Camera}</span><br>`
+                device += `<span class="features"><b>Rear camera  :  </b>${data[i].Rear_Camera}</span><br>`
+                device += `<span class="features"><b>Processor  :  </b>${data[i].Processor}</span><br>`
+                device += `<span class="features"><b>OS  :  </b>${data[i].OS}</span><br><br>`
+
+                device += `<span><button onclick="document.location='gallery.htm'" target="_blank"> ${data[i].button}</button></span><br>`
+                device += `</span>`
+            }
+
+            document.getElementById("result").innerHTML = device;
+        }
+
+        displayMobileList(data)
+
+        const displayHighToLow = () => {
+            const sortedHighList = data.sort(function (a, b) { return b.price - a.price });
+            displayMobileList(sortedHighList)
+        }
+
+        const displayLowToHigh = () => {
+            const sortedLowList = data.sort(function (a, b) { return a.price - b.price });
+            displayMobileList(sortedLowList)
+        }
+
+        let popData=()=>{
+           let dataAfterPop = data.pop(); 
+           displayHighToLow(dataAfterPop);
+        }
+
+
+    </script>
+</body>
+
+</html>

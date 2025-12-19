@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="device-width,initial-scale=1.0">
+    <style>
+        legend {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: darkblue;
+            margin: 0 10px 0 10px;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 960px;
+            background-color: lavenderblush;
+            border: 1px solid #ccc;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+
+        .submit {
+            background-color: blue;
+            color: white;
+            margin-right: 30px;
+            width: 60px;
+            height: 20px;
+            font-weight: 400;
+            margin-left: 20px;
+        }
+
+        .reset {
+            background-color: blue;
+            color: white;
+            width: 60px;
+            height: 20px;
+            font-weight: 400;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .message {
+            margin-left: 20px;
+        }
+
+        .application {
+            margin: 0 10px 10px 10px;
+            background-color: white;
+        }
+    </style>
+    <title> Application Form</title>
+</head>
+
+<body style="padding-left:10px;">
+    <div id="container">
+
+        <h1>Application Form</h1>
+
+        <form action="gallery.htm" method="post">
+            <div class="application">
+                <fieldset>
+                    <legend>Personal Information</legend><br>
+                    <div>
+                        <label>First name</label><br>
+                        <input type="text" name="firstname" id="firstname" autofocus required><br><br>
+
+                        <label for="lastname">Last name</label><br>
+                        <input type="text" name="lastname" id="lastname">
+                    </div><br>
+                    <div>
+                        <label for="DOB">Date of birth</label><br>
+                        <input type="date" name="DOB" id="DOB">
+                    </div><br>
+                    <div>
+                        <p>Gender</p>
+                        <input type="radio" name="gender" id="gender" value="male" checked>
+                        <label for="gender">Male</label><br>
+
+                        <input type="radio" name="gender" id="gender" value="female">
+                        <label for="gender">Female</label>
+
+                    </div><br>
+                </fieldset>
+            </div>
+            <div class="application">
+                <fieldset>
+                    <legend>Contact details</legend><br>
+                    <div>
+                        <label for="Address"> Address</label>
+                        <input type="text" name="Address" id="Address" size="45">
+                    </div><br>
+
+                    <div>
+                        <label for="pincode">Pincode</label>
+                        <input type="text" name="pincode" id="pincode"size="4" maxlength="4">
+                    </div><br>
+
+                    <div>
+                       
+                        <label for="codes">Contact number</label>
+                        <select id="codes" name="country_code">
+                            <option value="+93">+93</option>
+                            <option value="+355">+355</option>
+                            <option value="+213">+213</option>
+                            <option value="+244">+244</option>
+                            <option value="+61">+61</option>
+                            <option value="+55">+55</option>
+                            <option value="+1441">+1441</option>
+                            <option value="+1284">+1284</option>
+                            <option value="+682">+682</option>
+                            <option value="+253">+253</option>
+                            <option selected value="+91">+91</option>
+                        </select>
+                        <input type="tel" name="Contact number" size="10" maxlength="10" pattern="[0-9]{10}" required>
+                    </div><br>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email"name="email">
+                    </div><br>
+                </fieldset>
+            </div>
+            <div class="application">
+                <fieldset>
+                    <legend>Educational details</legend><br>
+                    <div>
+                        <label for="college">Name of your college</label>
+                        <select id="college" name="college">
+                            <option value="Channabasaveshwara  Institute of Technology">
+                                Channabasaveshwara Institute of Technology</option>
+                            <option value="Siddaganga Institute of Technology">Siddaganga Institute of Technology
+                            </option>
+                            <option value="BMS College of Engeneering">BMS College of Engeneering</option>
+                            <option value="Ramaiah Institute of Technology ">Ramaiah Institute of Technology</option>
+                        </select><br><br>
+                    </div><br>
+
+
+                    <div>
+                        <div>Branch</div>
+                        <input type="radio" name="branch" id="branch" value="ECE" checked>
+                        <label for="branch">ECE</label><br>
+                        <input type="radio" name="branch" id="branch"value="CSE">
+                        <label for="branch">CSE</label><br>
+                        <input type="radio" name="branch" id="branch"value="ISE">
+                        <label for="branch">ISE</label><br>
+                        <input type="radio" name="branch"id="branch" value="EEE">
+                        <label for="branch">EEE</label><br>
+                        <input type="radio" name="branch" id="branch"value="AI&DS">
+                        <label for="branch">AI&DS</label><br>
+                        <input type="radio" name="branch" id="branch" value="others">
+                        <label for="branch">Others</label>
+                    </div><br>
+
+
+                    <div>
+                        <span>USN</span>
+                        <input type="text" name="USN" maxlength="10" size="10" required placeholder="1CG22EC009">
+                    </div><br>
+
+                    <div>
+                        <label for="pass_out">Select your pass-out year</label>
+                        <select id="pass_out" name="pass_out">
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+                    </div><br>
+
+
+                    <div>
+                        <label for="cgpa">Enter your CGPA</label>
+                        <input type="text" id="cgpa" name="cgpa" required placeholder="8.2" size="1">
+                    </div><br>
+                    <div>
+                        <label for="backlogs">How many backlogs do u have</label>
+                        <input type="number" id="backlogs"name="backlogs" min="0" max="10" step="1" size="1">
+
+                    </div><br>
+                </fieldset>
+            </div>
+            <div class="application">
+
+                <fieldset>
+                    <legend>Favourites</legend>
+                    <div>
+                        <p>Which is your favourite subject</p>
+                        <input type="checkbox" name="favsub1" id="favsub1" value="control system">
+                        <label for="favsub1">Control system</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="favsub2" id="favsub2" value="digital signal processing">
+                        <label for="favsub2">Digital signal processing</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="favsub3" id="favsu31" value="network analysis">
+                        <label for="favsub3">Network analysis</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="favsub4" id="favsu31" value="vlsi design">
+                        <label for="favsub4">Vlsi design</label><br><br>
+                    </div>
+
+
+                    <div>
+                        <span>Choose your favourite color</span>
+                        <input type="color" name="favorite_color">
+                    </div><br>
+
+                </fieldset>
+            </div>
+            <div class="application">
+                <fieldset>
+                    <legend>Skills and Proficiency</legend>
+                    <div>
+                        <br>
+                        <label for="programming_languages">Programming languages</label>
+                        <input type="text" id="programming_languages" name="programming_languages" size="50">
+                    </div><br>
+
+                    <div>
+                        <label for="web_technologies" >Web Technologies</label>
+                        <input type="text" id="web_technologies" name="web_technologies" size="50">
+                    </div><br>
+
+                    <div>
+                        <label for="programming_rate">Rate your proficiency in programming (out of 100)</label>
+                        <input type="range" name="programming_rate"id="programming_rate" min="0" max="100">
+                    </div><br>
+
+                </fieldset>
+            </div>
+
+            <div class="application">
+                <fieldset>
+                    <legend>Supporting Documents and Profiles</legend>
+                    <br>
+                    <div>
+                        <label for="certificate">Upload your certificates(if any)</label>
+                        <input type="file" name="certificates" id="certificate" multiple>
+                    </div><br>
+
+
+                    <div>
+                        <label for="projects">Attach your project reports(if any)</label>
+                        <input type="file" name="projects" id="projects" multiple>
+                    </div><br>
+
+                    <div>
+                        <label for="github_url">Share your Github profile(if any)</label>
+                        <input type="url" id="github_url" name="github_url">
+                    </div><br>
+
+
+                    <div>
+                        <label for="resume">Attach your Resume</label>
+                        <input type="file" id="resume" name="resume" required>
+                    </div><br>
+
+                </fieldset>
+            </div>
+            <div class="application">
+                <fieldset>
+                    <legend>Message</legend><br>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea rows="10" cols="30"></textarea>
+
+                    </div><br>
+
+                </fieldset>
+            </div>
+
+            <div>
+
+                <input class="message" type="checkbox" name="declaration" required>
+                <span>"I confirm that the Information provided is true"</span>
+            </div><br>
+            <div>
+                <input class="submit" type="submit" value="Submit">
+
+                <input class="reset" type="reset" value="Reset">
+            </div><br>
+    </div>
+
+    </form>
+</body>
+
+</html>
