@@ -19,7 +19,7 @@
         <div id="result"></div>
     </div>
 
-    
+
     <script>
         const data = [
             {
@@ -160,18 +160,18 @@
                 device += `<span class="mobile-item">`
                 device += `<span class="images"><img src = "images/${data[i].Image}"width="200px" height="300"></span><br><br>`
 
-                device += `<span class="features"><b>Brand  :  </b><span style="color:blue;"> <b>${data[i].Brand}</b></span> </span><br>`
-                device += `<span class="features"><b>Model  :  </b><span style="color:blue;"> <b>${data[i].Model}</b></span></span><br>`
-                device += `<span class="features"><b>Color  :  </b>${data[i].Color}</span><br>`
-                device += `<span class="features"><b>Price  :  </b><span style="color:red;"> <b>${data[i].price}</b></span></span><br>`
-                device += `<span class="features"><b>Display  :  </b>${data[i].Display}</span><br>`
-                device += `<span class="features"><b>Battery capacity  :  </b>${data[i].Battery_Capacity}</span><br>`
-                device += `<span class="features"><b>Storage  :  </b>${data[i].Storage}</span><br>`
-                device += `<span class="features"><b>RAM  :  </b>${data[i].RAM}</span><br>`
-                device += `<span class="features"><b>Front camera  :  </b>${data[i].Front_Camera}</span><br>`
-                device += `<span class="features"><b>Rear camera  :  </b>${data[i].Rear_Camera}</span><br>`
-                device += `<span class="features"><b>Processor  :  </b>${data[i].Processor}</span><br>`
-                device += `<span class="features"><b>OS  :  </b>${data[i].OS}</span><br><br>`
+                device += `<span class="features"><b>Brand:</b><span style="color:blue;"> <b>${data[i].Brand}</b></span> </span><br>`
+                device += `<span class="features"><b>Model:</b><span style="color:blue;"> <b>${data[i].Model}</b></span></span><br>`
+                device += `<span class="features"><b>Color:</b>${data[i].Color}</span><br>`
+                device += `<span class="features"><b>Price:</b><span style="color:red;"> <b>${data[i].price}</b></span></span><br>`
+                device += `<span class="features"><b>Display:</b>${data[i].Display}</span><br>`
+                device += `<span class="features"><b>Battery capacity:</b>${data[i].Battery_Capacity}</span><br>`
+                device += `<span class="features"><b>Storage:</b>${data[i].Storage}</span><br>`
+                device += `<span class="features"><b>RAM:</b>${data[i].RAM}</span><br>`
+                device += `<span class="features"><b>Front camera:</b>${data[i].Front_Camera}</span><br>`
+                device += `<span class="features"><b>Rear camera:</b>${data[i].Rear_Camera}</span><br>`
+                device += `<span class="features"><b>Processor:</b>${data[i].Processor}</span><br>`
+                device += `<span class="features"><b>OS:</b>${data[i].OS}</span><br><br>`
 
                 device += `<span><button onclick="document.location='gallery.htm'" target="_blank"> ${data[i].button}</button></span><br>`
                 device += `</span>`
@@ -192,9 +192,9 @@
             displayMobileList(sortedLowList)
         }
 
-        let popData=()=>{
-           let dataAfterPop = data.pop(); 
-           displayHighToLow(dataAfterPop);
+        let popData = () => {
+            let dataAfterPop = data.pop();
+            displayHighToLow(dataAfterPop);
         }
 
 
