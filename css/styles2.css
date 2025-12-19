@@ -1,0 +1,37 @@
+#container{
+    width: 960px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding:10px;
+    background-color: azure;
+    overflow: auto;
+
+   
+}
+.features{
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 12px;
+ color:black;
+}
+.mobile-item{
+    float: left;
+    width:25%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 5%;
+  
+}
+button{
+   background-color:mediumseagreen;
+   color:white;
+   font-weight: normal;
+   padding:5px;
+   width:40%;
+   font-size:15px;
+   
+   
+}
+button:hover{
+    background-color: palegreen;
+    color:black;
+}
