@@ -116,17 +116,6 @@ nav ul li a.active {
     }
 }
 
-#container {
-    width: 960px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: azure;
-    overflow: auto;
-
-
-}
-
 .features {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
