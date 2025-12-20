@@ -21,8 +21,11 @@
     min-height: 650px;
 }
 
-button {
-    background-color: cornflowerblue;
+.button_home {
+    background-color:#16a085;
+    width:20%;
+    padding: 5px;
+
 }
 
 h1 {
@@ -128,21 +131,19 @@ nav ul li a.active {
     margin-bottom: 5%;
     margin-left: 3%;
     margin-right: 5%;
-
 }
 
 button {
-    background-color: mediumseagreen;
-    color: white;
+    background-color:aliceblue;
+    color:black;
     font-weight: normal;
-    padding: 5px;
-    width: 40%;
+    padding: 2px;
+    width: 20px;
     font-size: 15px;
-
-
+    min-height: 0px;
 }
 
 button:hover {
-    background-color: palegreen;
+    background-color:cadetblue;
     color: black;
 }

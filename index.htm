@@ -21,23 +21,35 @@
                 </ul>
             </nav>
         </div>
-        <h1 class="home_h1">HTML Demo</h1>
+        <h1>Home</h1>
         <div id="info">Welcome to our homepage!<br><br> We're glad you're here-<span class="span1">explore</span>,<span
                 class="span2">learn</span>,and
             <span class="span3">enjoy </span>everything we've prepared for you.
 
         </div><br>
-        <button
+        <button class="button_home"
             onclick="changeText('Thank you for visiting our homepage!</span><br><br> We hope you found what you were looking for and we look forward to seeing you again soon.')">click
             here</button>
-
+        <h2>Replacing attribute using Javascript</h2>
+        <div class="image">
+            <button class="button_home" onclick="changeImage('images/dooropen.png')">Click here to open the
+                door</button>
+            <img src="images/doorclosed.png" id="image">
+            <button class="button_home" onclick="changeImage('images/doorclosed.png')">Click here to close the
+                door</button>
+        </div>
     </div>
     <script>
         function changeText(text) {
             document.getElementById("info").innerHTML = text;
         }
+        function changeImage(image) {
+            document.getElementById("image").src = image;
+
+        }
+
     </script>
 
 </body>
 
-</html>
+</html

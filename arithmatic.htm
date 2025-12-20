@@ -18,8 +18,8 @@
                 </ul>
             </nav>
         </div>
-        <form method="post" onsubmit="addition(event) ,multiply(event),subtraction(event),division(event)">
-            <div>
+        <div>
+            <form onsubmit="addition(event)">
                 <div>
                     <h1>Arithmatic Operations</h1>
                 </div>
@@ -30,12 +30,12 @@
                 <input type="number" name="number1" id="number1" required>
                 +
                 <input type="number" name="number2" id="number2" required>
-                <input type="submit" value="=">
+                <button type="submit">=</button>
                 <output id="add_result"></output>
-            </div>
+            </form>
 
 
-            <div>
+            <form onsubmit="multiply(event)">
 
                 <h2>Multiplication</h2>
 
@@ -45,12 +45,12 @@
                 <input type="number" name="num2" id="num2" required>
                 *
                 <input type="number" name="num3" id="num3" required>
-                <input type="submit" value="=">
+                <button type="submit">=</button>
                 <output id="mul_result"></output>
 
-            </div>
+            </form>
 
-            <div>
+            <form onsubmit="subtraction(event)">
                 <h2>Subtraction</h2>
                 <div>
                     Enter the numbers to perform subtraction
@@ -58,21 +58,21 @@
                 <input type="number" name="value1" id="value1" required>
                 -
                 <input type="number" name="value2" id="value2" required>
-                <input type="submit" value="=">
+                <button type="submit">=</button>
                 <ouput id="sub_result"></ouput>
 
-            </div>
+            </form>
 
-            <div>
+            <form onsubmit="division(event)">
                 <h2>Division</h2>
                 <div>Enter the numbers to perform division</div><br>
                 <input type="number" name="digit1" id="digit1" required>
                 /
                 <input type="number" name="digit2" id="digit2" required>
-                <input type="submit" value="=">
+                <button type="submit">=</button>
                 <output id="div_result"></output>
-            </div>
-        </form>
+            </form>
+        </div>
         <script>
             function addition(event) {
                 event.preventDefault();
