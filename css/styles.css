@@ -18,6 +18,7 @@
     background-color: lightsteelblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
+    min-height: 650px;
 }
 
 button {
