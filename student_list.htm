@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array object</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="mobile_list.htm">Mobile Devices</a></li>
+                    <li><a href="student_list.htm">Student Records</a></li>
+                    <li><a href="arithmatic.htm">Calculations</a></li>
+                    <li><a href="gallery.htm">Photo Gallery</a></li>
+                    <li><a href="forms.htm">Registration Forms</a></li>
+                    <li><a href="multimedia.htm">Media Center</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Students table</h1>
+        <p id="greet"></p>
+        <p id="deg"></p>
+        <script>
+            const studentList = [{
+                student_usn: "1CG22EC009",
+                firstName: "Akanksha",
+                lastName: "S",
+                branch: "ECE",
+                college: "CIT",
+                semester: "7",
+                year: "4th",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1CG22CS004",
+                firstName: "Asha",
+                lastName: "Kiran",
+                branch: "CSE",
+                college: "CIT",
+                semester: "7",
+                year: "4th",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1CG22EC049",
+                firstName: "Neha",
+                lastName: "L",
+                branch: "ECE",
+                college: "CIT",
+                semester: "7",
+                year: "4th",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1SI22CS120",
+                firstName: "Parnika",
+                lastName: "H S",
+                branch: "CSE",
+                college: "SIT",
+                semester: "7",
+                year: "4th",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1CG23EE149",
+                firstName: "Yuktha",
+                lastName: "T",
+                branch: "EEE",
+                college: "CIT",
+                semester: "5",
+                year: "3rd",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1SI22CS077",
+                firstName: "Karthik",
+                lastName: "D Yadhav",
+                branch: "SIT",
+                college: "CIT",
+                semester: "5",
+                year: "3rd",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            },
+            {
+                student_usn: "1CG22EC029",
+                firstName: "Rahul",
+                lastName: "P",
+                branch: "ECE",
+                college: "CIT",
+                semester: "7",
+                year: "4th",
+                getFullName: function () { return this.firstName + " " + this.lastName; }
+            }
+
+            ];
+
+            const displayFilteredList = () => {
+
+                const filteredData = studentList.filter((item) => { return item.college === "CIT" && item.branch === "ECE" && item.semester === "7" })
+                console.log("studentfiltered", filteredData);
+                let table = ""
+
+                table += `<table border="1px" cellspacing="0" cellpadding="5px">`
+
+                table += `<tr>`
+                table += `<th>Name</th>`
+                table += `<th>USN</th>`
+                table += `<th>College</th>`
+                table += `<th>Branch</th>`
+                table += `<th>Semester</th>`
+                table += `<th>Year</th>`
+                table += `</tr>`
+
+                filteredData.forEach((item) => {
+
+                    table += `<tr>`
+                    table += `<td>${item.getFullName()}</td>`
+                    table += `<td>${item.student_usn}</td>`
+                    table += `<td>${item.college}</td>`
+                    table += `<td>${item.branch}</td>`
+                    table += `<td>${item.semester}</td>`
+                    table += `<td>${item.year}</td>`
+                    table += `</tr>`
+                });
+
+                table += `</table>`
+                document.getElementById("greet").innerHTML = table;
+
+            }
+
+            displayFilteredList();
+            const displayMappedList = (item) => {
+                const mappedData = studentList.map((item) => { return item })
+
+                let table2 = ""
+
+                table2 += `<table border="1px" cellspacing="0" cellpadding="5px">`
+
+                table2 += `<tr>`
+                table2 += `<th>Name</th>`
+                table2 += `<th>USN</th>`
+                table2 += `<th>College</th>`
+                table2 += `<th>Branch</th>`
+                table2 += `<th>Semester</th>`
+                table2 += `<th>Year</th>`
+                table2 += `</tr>`
+
+                mappedData.forEach((item) => {
+
+                    table2 += `<tr>`
+                    table2 += `<td>${item.getFullName()}</td>`
+                    table2 += `<td>${item.student_usn}</td>`
+                    table2 += `<td>${item.college}</td>`
+                    table2 += `<td>${item.branch}</td>`
+                    table2 += `<td>${item.semester}</td>`
+                    table2 += `<td>${item.year}</td>`
+                    table2 += `</tr>`
+                });
+
+                table2 += `</table>`
+                document.getElementById("deg").innerHTML = table2;
+
+            }
+            displayMappedList();
+
+        </script>
+    </div>
+</body>
+
+</html>

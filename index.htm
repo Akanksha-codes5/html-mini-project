@@ -1,0 +1,43 @@
+<!DOCTYPE html>-
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="container_home">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="mobile_list.htm">Mobile Devices</a></li>
+                    <li><a href="student_list.htm">Student Records</a></li>
+                    <li><a href="arithmatic.htm">Calculations</a></li>
+                    <li><a href="gallery.htm">Photo Gallery</a></li>
+                    <li><a href="forms.htm">Registration Forms</a></li>
+                    <li><a href="multimedia.htm">Media Center</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="home_h1">Html demo</h1>
+        <div id="info">Welcome to our homepage!<br><br> We're glad you're here-<span class="span1">explore</span>,<span
+                class="span2">learn</span>,and
+            <span class="span3">enjoy </span>everything we've prepared for you.
+
+        </div><br>
+        <button
+            onclick="changeText('Thank you for visiting our homepage!</span><br><br> We hope you found what you were looking for and we look forward to seeing you again soon.')">click
+            here</button>
+
+    </div>
+    <script>
+        function changeText(text) {
+            document.getElementById("info").innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>

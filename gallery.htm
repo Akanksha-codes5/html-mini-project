@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="container_gallery">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="mobile_list.htm">Mobile Devices</a></li>
+                    <li><a href="student_list.htm">Student Records</a></li>
+                    <li><a href="arithmatic.htm">Calculations</a></li>
+                    <li><a href="gallery.htm">Photo Gallery</a></li>
+                    <li><a href="forms.htm">Registration Forms</a></li>
+                    <li><a href="multimedia.htm">Media Center</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Replacing attribute using Javascript</h1>
+        <div class="image">
+            <button onclick="changeImage('images/dooropen.png')">Click here to open the door</button>
+            <img src="images/doorclosed.png" id="image">
+            <button onclick="changeImage('images/doorclosed.png')">Click here to close the door</button>
+        </div>
+        <script>
+            function changeImage(image) {
+                document.getElementById("image").src = image;
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>

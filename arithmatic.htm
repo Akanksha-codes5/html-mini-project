@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>Arithmatic Operation </title>
+<link rel="stylesheet" href="css/styles.css">
+
+<body>
+    <div id="container">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="mobile_list.htm">Mobile Devices</a></li>
+                    <li><a href="student_list.htm">Student Records</a></li>
+                    <li><a href="arithmatic.htm">Calculations</a></li>
+                    <li><a href="gallery.htm">Photo Gallery</a></li>
+                    <li><a href="forms.htm">Registration Forms</a></li>
+                    <li><a href="multimedia.htm">Media Center</a></li>
+                </ul>
+            </nav>
+        </div>
+        <form method="post" onsubmit="addition(event) ,multiply(event),subtraction(event),division(event)">
+            <div>
+                <div>
+                    <h1>Arithmatic Operations</h1>
+                </div>
+
+                <h2>Addition</h2>
+
+                <div>Enter the numbers to perform addition</div><br>
+                <input type="number" name="number1" id="number1">
+                +
+                <input type="number" name="number2" id="number2">
+                <input type="submit" value="=">
+                <output id="add_result"></output>
+            </div>
+
+
+            <div>
+
+                <h2>Multiplication</h2>
+
+                <div>Enter the numbers to perform multiplication</div><br>
+                <input type="number" name="num1" id="num1">
+                *
+                <input type="number" name="num2" id="num2">
+                *
+                <input type="number" name="num3" id="num3">
+                <input type="submit" value="=">
+                <output id="mul_result"></output>
+
+            </div>
+
+            <div>
+                <h2>Subtraction</h2>
+                <div>
+                    Enter the numbers to perform subtraction
+                </div><br>
+                <input type="number" name="value1" id="value1">
+                -
+                <input type="number" name="value2" id="value2">
+                <input type="submit" value="=">
+                <ouput id="sub_result"></ouput>
+
+            </div>
+
+            <div>
+                <h2>Division</h2>
+                <div>Enter the numbers to perform division</div><br>
+                <input type="number" name="digit1" id="digit1">
+                /
+                <input type="number" name="digit2" id="digit2">
+                <input type="submit" value="=">
+                <output id="div_result"></output>
+            </div>
+        </form>
+        <script>
+            function addition(event) {
+                event.preventDefault();
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                var result1 = Number(num1) + Number(num2);
+                console.log(result1)
+                document.getElementById("add_result").innerHTML = result1;
+            }
+
+
+            function multiply(event) {
+                event.preventDefault();
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var num3 = document.getElementById("num3").value;
+
+                var result2 = Number(num1) * Number(num2) * Number(num3);
+                console.log(result2);
+                document.getElementById("mul_result").innerHTML = result2;
+
+            }
+
+            function subtraction(event) {
+                event.preventDefault();
+                var num1 = document.getElementById("value1").value;
+                var num2 = document.getElementById("value2").value;
+                var result3 = Number(num1) - Number(num2);
+                document.getElementById("sub_result").innerHTML = result3;
+            }
+
+            function division(event) {
+                event.preventDefault();
+                var num1 = document.getElementById("digit1").value;
+                var num2 = document.getElementById("digit2").value;
+                var result4 = Number(num1) / Number(num2);
+                console.log(result4);
+                document.getElementById("div_result").innerHTML = result4;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
